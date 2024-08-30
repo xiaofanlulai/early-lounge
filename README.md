@@ -1,12 +1,18 @@
-# :link: 各種リンク　　
+# :link: 各種リンク  
 [デザインカンプ Figma](https://www.figma.com/design/HwgFUgW9H2nGqOmacHG4IW/%E6%9C%9D%E6%B4%BB%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3_Early-LOUNGE?node-id=2634-637&t=dOlAfHM2qlostRKN-1)
 
 # :boom: ガイドライン
 ## 1. 命名規則
-- クラス名・ID名の命名規則
+### クラス名・ID名の命名規則
    - BEM方式 ` block__element␣--modifier ` で統一。
-   - 複数語の連結はキャメルケース。
-- ファイル名の命名規則
+   - 複数語はキャメルケースで連結する。
+   - TOPページはBlock名の頭に「top」を付け、blockに繋げる(キャメルケース記法)。
+   - modifierの後には要素を追加してはいけない。
+   - block名は同じものを使用しない。
+> [!CAUTION]
+> elementとmodifierの間には半角スペースがあるので注意
+
+### ファイル名
    - 小文字とハイフンを使用。 例）header-component.js, main-content.css
    - 意味のある名前を使用。 例）user-profile.js
    - 拡張子の一貫性 → .js .css .scss .html

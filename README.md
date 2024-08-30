@@ -3,26 +3,54 @@
 
 # :boom: ガイドライン
 ## 1. 命名規則
-### クラス名・ID名の命名規則
-   - BEM方式 ` block__element␣--modifier ` で統一。
-   - 複数語はキャメルケースで連結する。
-   - TOPページはBlock名の頭に「top」を付け、blockに繋げる(キャメルケース記法)。
-   - modifierの後には要素を追加してはいけない。
-   - block名は同じものを使用しない。
+### クラス名
+- BEM方式 ` block__element␣--modifier ` で統一。
+- 複数語はキャメルケースで連結する。
+- ~~TOPページはBlock名の頭に「top」を付け、blockに繋げる(キャメルケース記法)。~~
+- modifierの後には要素を追加してはいけない。
+- block名は同じものを使用しない。
 ```
+block__element --modifier
+例）company__image --active
 
+company__imageWrapper --active
+
+✕ content__inner --column--reverse
+◯ content__inner --columnReverse
 ```
 > [!CAUTION]
-> elementとmodifierの間には半角スペースがあるので注意
-
+> elementとmodifierの間には半角スペースがあるので注意。
+### id名
+- 前提として、CSS適用の際のid指定は禁止。
+- JavaScriptはidを定義して実装する。
+- ` js-役割に基づく命名 ` で統一する。
+```
+js-toggleMenu
+js-userProfile
+```
 ### ファイル名
-   - 小文字とハイフンを使用。 例）header-component.js, main-content.css
-   - 意味のある名前を使用。 例）user-profile.js
-   - 拡張子の一貫性 → .js .css .scss .html
-- 変数名の命名規則
-   - キャメルケースを使用。 例）userName
-- 画像ファイルの命名規則
-   - 「ページ名-セクション名-役割に基づいた名前.〇〇」で統一。 例）top-service-icon01.png
+- 小文字とハイフンを使用。
+- 意味のある名前を使用。
+- 拡張子の一貫性 → .html css .scss .js
+```
+service.html
+top.css
+user-profile.js
+```
+### 変数名
+- キャメルケースを使用。
+```
+userName
+backGroundColor
+```
+### 画像ファイル
+   - ` ページ名-セクション名-役割に基づいた名前.〇〇 ` で統一。
+   - ~~ページごとにフォルダを分けない~~
+   - 大文字は使用しない
+   - 英単語は省略しない。
+```
+top-service-icon01.png
+```
 ## 2. フレームワークやライブラリの選定
    - CSS：Sacc(scss)を使用。
    - JavaScriptフレームワーク：jQueryを使用。

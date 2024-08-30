@@ -1,1 +1,70 @@
+# macOS 特有のファイル
 .DS_Store
+
+# Windows 特有のファイル
+Thumbs.db
+Desktop.ini
+
+# ローカル環境の設定ファイル
+*.log
+*.env
+*.local
+
+# node.js プロジェクト
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python プロジェクト
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.venv/
+
+# Java プロジェクト
+*.class
+*.war
+*.jar
+*.ear
+target/
+build/
+
+# Ruby on Rails プロジェクト
+*.rbc
+.ruby-version
+.ruby-gemset
+vendor/bundle/
+log/
+tmp/
+db/*.sqlite3
+db/*.sqlite3-journal
+
+# .NET プロジェクト
+*.dll
+*.exe
+*.pdb
+*.mdb
+bin/
+obj/
+*.csproj.user
+
+# バージョン管理されたバイナリファイル
+*.exe
+*.o
+*.a
+*.so
+*.lib
+
+# VS Code エディタ設定
+.vscode/
+
+# JetBrains IDEs (e.g., IntelliJ IDEA, WebStorm, PyCharm)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.subl

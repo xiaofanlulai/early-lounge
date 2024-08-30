@@ -9,6 +9,9 @@
    - TOPページはBlock名の頭に「top」を付け、blockに繋げる(キャメルケース記法)。
    - modifierの後には要素を追加してはいけない。
    - block名は同じものを使用しない。
+```
+
+```
 > [!CAUTION]
 > elementとmodifierの間には半角スペースがあるので注意
 

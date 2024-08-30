@@ -1,3 +1,149 @@
+@charset "UTF-8";
+/* ================================
+
+共通で考えること
+・フォントファミリー ※済(仮)
+・フォントサイズ ※済(仮)
+・カラー変数 ※済(仮)
+・そのた（ラインハイト、レタースペーシング）
+
+================================ */
+/* フォントファミリーの変数定義 */
+/*  フォントの太さ（Noto Sans JP） */
+/* フォントサイズの定義 */
+/* 基本のフォントサイズ (16px) */
+/* 小さめのフォントサイズ (14px) */
+/* 大きめのフォントサイズ (20px) */
+/* 見出し (40px) */
+/* 見出し (32px) */
+/* 見出し (24px) */
+/* カラーパレットの定義 */
+/* その他のスタイル */
+/* 行間を1.5倍に設定 */
+/* フォントサイズの5%として文字間スペースを設定 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nova+Slim&display=swap");
+/* ==============================
+ ページ全体のレイアウト
+============================== */
+html {
+  font-size: 16px;
+}
+
 body {
-  background-color: aqua;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #F7F7F7;
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  margin: 0 80px;
+}
+
+/* タブレット (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin: 0 50px;
+  }
+}
+/* スマートフォン (Mobile) */
+@media (max-width: 767px) {
+  body {
+    font-size: 0.875rem;
+    margin: 0 10px;
+  }
+}
+/* ==============================
+ header
+============================== */
+.header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logoLink {
+  font-family: "Nova Slim", sans-serif;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.header__navigation {
+  display: flex;
+  column-gap: 40px;
+}
+.header__navigationItem {
+  font-size: 0.875rem;
+}
+.header__navigationItemLink {
+  text-decoration: none;
+}
+.header__navigationItemLink.--active {
+  opacity: 1;
+  font-weight: 700;
+  pointer-events: none;
+}
+.header__navigationItemLink:hover {
+  opacity: 0.6;
+}
+
+/* タブレット (Tablet) */
+/* スマートフォン (Mobile) */
+/* ==============================
+ ボタンのレイアウト
+============================== */
+.contactButtonContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.contactButtonContainer .contactButton {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 35px;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.contactButtonContainer .contactButton:hover {
+  opacity: 0.6;
+}
+.contactButtonContainer .contactButtonText {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 63px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  line-height: 1;
+}
+.contactButtonContainer .contactButtonIconImage {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+/* ==============================
+ カテゴリーラベルのレイアウト
+============================== */
+.sectionLabel {
+  width: 120px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.sectionLabelText {
+  text-align: center;
+  line-height: 25px;
 }/*# sourceMappingURL=top.css.map */

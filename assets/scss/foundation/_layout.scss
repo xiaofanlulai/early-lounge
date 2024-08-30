@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nova+Slim&display=swap');
+
+/* ==============================
+ ページ全体のレイアウト
+============================== */
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    background-color: $background-color;
+    color: $text-base-color;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-base;
+    margin: 0 80px;
+}
+
+/* タブレット (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body{
+        margin: 0 50px;
+    }
+}
+
+/* スマートフォン (Mobile) */
+@media (max-width: 767px) {
+    body{
+        font-size: $font-size-small;
+        margin: 0 10px;
+    }
+}
+
+/* ==============================
+ header
+============================== */
+.header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+
+        &Link{
+            font-family: $font-logo;
+            text-decoration: none;
+            font-size: $font-size-h2;
+        }
+    }
+
+    &__navigation{
+        display: flex;
+        column-gap: 40px;
+
+        &Item{
+            font-size: $font-size-small;
+
+            &Link{
+                text-decoration: none;
+
+                &.--active{
+                    opacity: 1;
+                    font-weight: $font-weight-bold;
+                    pointer-events: none;
+                }
+
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+/* タブレット (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* スマートフォン (Mobile) */
+@media (max-width: 767px) {
+}
+
+/* ==============================
+ ボタンのレイアウト
+============================== */
+.contactButtonContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .contactButton{
+        width: 300px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: $color-white;
+        border: 1px solid #000;
+        border-radius: 35px;
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        transition: background-color 0.3s ease;
+
+        &:hover{
+            opacity: 0.6;
+        }
+
+        &Text{
+            position: absolute;
+            font-size: $font-size-h3;
+            left: 63px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #000000;
+            line-height: 1;
+        }
+
+        &IconImage{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333;
+            border-radius: 50%;
+        }
+    }
+}
+
+/* ==============================
+ カテゴリーラベルのレイアウト
+============================== */
+.sectionLabel{
+    width: 120px;
+    height: 25px;
+    background-color: $color-white;
+    border-radius: 15px;
+
+    &Text{
+        text-align: center;
+        line-height: 25px;
+    }
+}

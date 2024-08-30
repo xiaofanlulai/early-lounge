@@ -1,3 +1,3 @@
-body{
-    background-color: aqua;
-}
+@import 'foundation/variables';  // _variables.scssを読み込む
+@import 'foundation/mixins';     // _mixins.scssを読み込む
+@import 'foundation/layout';     // _layout.scssを読み込む

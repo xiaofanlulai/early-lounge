@@ -1,1 +1,56 @@
-/*# sourceMappingURL=top.css.map */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nova+Slim&display=swap");
+/* フォントファミリーの変数定義 */
+/*  フォントの太さ（Noto Sans JP） */
+/* フォントサイズの定義 */
+/* 基本フォントサイズ (16px相当) */
+/* 小さめフォントサイズ (14px相当) */
+/* 極小フォントサイズ (12px相当) */
+/* 大きめフォントサイズ (20px相当) */
+/* 見出し (40px相当) */
+/* 見出し (32px相当) */
+/* 見出し (24px相当) */
+/* カラーパレットの定義 */
+/* その他のスタイル */
+/* 行間を1.5倍に設定 */
+/* フォントサイズの5%として文字間スペースを設定 */
+/* ==============================
+ ページ全体のレイアウト
+============================== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #F7F7F7;
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  margin: 0 80px;
+}
+
+/* タブレット (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin: 0 50px;
+  }
+}
+/* スマートフォン (Mobile) */
+@media (max-width: 767px) {
+  body {
+    font-size: 1.4rem;
+    margin: 0 10px;
+  }
+}
+/* ==============================
+ header
+============================== */
+/* ==============================
+ footer
+============================== */
+/* ==============================
+ informationセクション
+============================== *//*# sourceMappingURL=top.css.map */

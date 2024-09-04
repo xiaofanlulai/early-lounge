@@ -1,0 +1,41 @@
+/* ==============================
+ ページ全体のレイアウト
+============================== */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    background-color: $background-color;
+    color: $text-base-color;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-base;
+    margin: 0 80px;
+}
+
+/* タブレット (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    body{
+        margin: 0 50px;
+    }
+}
+
+/* スマートフォン (Mobile) */
+@media (max-width: 767px) {
+    body{
+        font-size: $font-size-small;
+        margin: 0 10px;
+    }
+}
+
+/* ==============================
+ header
+============================== */
+
+
+/* ==============================
+ footer
+============================== */

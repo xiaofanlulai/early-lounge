@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
 
-/* ========================================
+/* ====================================
  _layout.scss
-========================================== */
+==================================== */
 
 html{
     font-size: 62.5%;
@@ -20,16 +20,16 @@ body{
     width: 100%;
 }
 
-/* MEDIUM */
+/* TABLET */
 @media screen and (width <= 1140px) {
     body{
-        font-size: $font-size-small;
+        font-size: $font-size-base-small;
     }
 }
 
-/* SMALL */
+/* SP */
 @media screen and (width <= 767px) {
     body{
-        font-size: $font-size-small;
+        font-size: $font-size-base-small;
     }
 }

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
-/* ========================================
+/* ====================================
  _layout.scss
-========================================== */
+==================================== */
 html {
   font-size: 62.5%;
 }
@@ -18,35 +18,34 @@ body {
   width: 100%;
 }
 
-/* MEDIUM */
+/* TABLET */
 @media screen and (width <= 1140px) {
   body {
     font-size: 1.4rem;
   }
 }
-/* SMALL */
+/* SP */
 @media screen and (width <= 767px) {
   body {
     font-size: 1.4rem;
   }
 }
-/* ========================================
- top.scss
-========================================== */
-/* 汎用クラス or セクション外要素 */
+/* ====================================
+ 汎用クラス or セクション外要素
+==================================== */
 #js-particles {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* 他のコンテンツの背後に表示 */
-  pointer-events: none; /* パーティクルの上でのクリックを無効にする */
+  z-index: -1;
+  pointer-events: none;
 }
 
 .backgroundWrapper {
   background: #FFF9F4;
-  padding: 108px 300px;
+  padding: 200px 30px;
 }
 
 .sectionTitle {
@@ -67,7 +66,9 @@ body {
   line-height: 1.4;
 }
 
-/* informationBar */
+/* ====================================
+ informationBar
+==================================== */
 .informationBar {
   background: #FFF9F4;
   display: flex;
@@ -80,7 +81,9 @@ body {
   font-size: 1.4rem;
 }
 
-/* hero */
+/* ====================================
+ hero
+==================================== */
 .hero {
   width: 100%;
   display: flex;
@@ -103,6 +106,10 @@ body {
   border-radius: 853px;
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.heroRectangle__title {
+  font-size: 8rem;
+  font-family: "Limelight", sans-serif;
 }
 
 .heroPoint {
@@ -134,12 +141,25 @@ body {
   transform: rotate(-60deg) translateY(-50%);
 }
 .heroPrice__amount {
-  font-size: 4rem; /* 980のサイズを大きく設定 */
+  font-size: 4rem;
   font-weight: bold;
   margin: 0 10px;
 }
 
-/* about */
+.heroButton {
+  display: inline-flex;
+  padding: 12px 40px 12px 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #FFBA56, #FF546E);
+}
+
+/* ====================================
+ about
+==================================== */
 .about {
-  width: 100%;
+  background: aquamarine;
+  padding: 200px;
 }/*# sourceMappingURL=top.css.map */

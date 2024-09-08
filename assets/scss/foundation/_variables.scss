@@ -15,14 +15,14 @@ $font-weight-bold: 700;
 // フォントサイズ
 // ====================================
 $font-size-base: 1.6rem;               // PC版基本サイズ（16px相当）
-$font-size-small: 1.4rem;              // TABLET,SP版基本サイズ（14px相当）
-$font-size-h1-big: 8rem;               // 80px相当
-$font-size-h1-medium: 6rem;            // 60px相当
-$font-size-h1-small: 4rem;             // 40px相当
-$font-size-h2-medium: 3.2rem;          // 32px相当
-$font-size-h2-tb-small: 2.4rem;        // 24px相当
-$font-size-h3-medium: 2rem;            // 20px相当
-$font-size-h3-tb-small: 1.8rem;        // 18px相当
+$font-size-base-small: 1.4rem;         // TABLET,SP版基本サイズ（14px相当）
+$font-size-xxl: 8rem;                  // 80px相当（PC：h1要素相当）
+$font-size-xl: 6rem;                   // 60px相当（TABLET：h1要素相当）
+$font-size-lg: 4rem;                   // 40px相当（SP：h1要素相当）
+$font-size-md: 3.2rem;                 // 32px相当（PC：h2要素相当）
+$font-size-sm: 2.4rem;                 // 24px相当（TABLET,SP：h2要素相当）
+$font-size-xs: 2rem;                   // 20px相当（PC：h1要素相当）
+$font-size-xxs: 1.8rem;                // 18px相当（TABLET,SP：h3要素相当）
 
 // ====================================
 // カラーパレット

@@ -2,19 +2,18 @@
 @import 'foundation/mixins';     // _mixins.scssを読み込む
 @import 'foundation/layout';     // _layout.scssを読み込む
 
-/* ========================================
- top.scss
-========================================== */
+/* ====================================
+ 汎用クラス or セクション外要素
+==================================== */
 
-/* 汎用クラス or セクション外要素 */
 #js-particles{
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* 他のコンテンツの背後に表示 */
-    pointer-events: none;  /* パーティクルの上でのクリックを無効にする */
+    z-index: -1; // 他のコンテンツの背後に表示
+    pointer-events: none;  // パーティクルの上でのクリックを無効にする
 }
 
 .backgroundWrapper{
@@ -26,7 +25,7 @@
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    font-size: $font-size-h2-pc;
+    font-size: $font-size-md;
     background: $gradient-orange;
     width: 450px;
     height: 60px;
@@ -41,7 +40,9 @@
     }
 }
 
-/* informationBar */
+/* ====================================
+ informationBar
+==================================== */
 .informationBar {
     background: $background-color;
     display: flex;
@@ -51,11 +52,13 @@
     width: 100%;
 
     &__text {
-        font-size: $font-size-small;
+        font-size: $font-size-base-small;
     }
 }
 
-/* hero */
+/* ====================================
+ hero
+==================================== */
 .hero{
     width: 100%;
     display: flex;
@@ -79,7 +82,8 @@
     background: #fff;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
     &__title{
-        font-size: $font-size-h1-big;
+        font-size: $font-size-xxl;
+        font-family: $font-logo;
     }
 }
 
@@ -89,7 +93,7 @@
 
 .heroPrice {
     position: relative;
-    font-size: 32px;
+    font-size: $font-size-md;
     color: $main-color;
     text-align: center;
     font-weight: $font-weight-medium;
@@ -115,7 +119,7 @@
     }
 
     &__amount{
-        font-size: $font-size-h1-medium;
+        font-size: $font-size-lg;
         font-weight: bold;
         margin: 0 10px;
     }
@@ -132,7 +136,10 @@
 }
 
 
-/* about */
+/* ====================================
+ about
+==================================== */
 .about{
-    width: 100%;
+    background: aquamarine;
+    padding: 200px;
 }

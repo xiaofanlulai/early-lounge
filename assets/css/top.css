@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
+/* ========================================
+ _layout.scss
+========================================== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fff;
+  color: #333;
+  line-height: 2;
+  letter-spacing: 0.05rem;
+  width: 100%;
+}
+
+/* MEDIUM */
+@media screen and (width <= 1140px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+/* SMALL */
+@media screen and (width <= 767px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+/* ========================================
+ top.scss
+========================================== */
+/* 汎用クラス or セクション外要素 */
+#js-particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* 他のコンテンツの背後に表示 */
+  pointer-events: none; /* パーティクルの上でのクリックを無効にする */
+}
+
+.backgroundWrapper {
+  background: #FFF9F4;
+  padding: 108px 300px;
+}
+
+.sectionTitle {
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, #FF9642, #FFBF50);
+  width: 450px;
+  height: 60px;
+  margin: 0 auto 54px;
+  line-height: 1.4;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.sectionTitle__limelight {
+  font-family: "Limelight", sans-serif;
+  line-height: 1.4;
+}
+
+/* informationBar */
+.informationBar {
+  background: #FFF9F4;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+}
+.informationBar__text {
+  font-size: 1.4rem;
+}
+
+/* hero */
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+}
+.hero__mainImage {
+  width: 550px;
+  height: auto;
+}
+
+.heroRectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 853px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.heroPoint {
+  display: flex;
+}
+
+.heroPrice {
+  position: relative;
+  font-size: 3.2rem;
+  color: #FF9642;
+  text-align: center;
+  font-weight: 500;
+}
+.heroPrice::before, .heroPrice::after {
+  content: "";
+  position: absolute;
+  top: 57%;
+  width: 30px; /* 線の長さ */
+  height: 30px; /* 線の長さ */
+  border-top: 4px solid #f39645; /* 線の太さと色 */
+  transform: translateY(-50%);
+}
+.heroPrice::before {
+  left: -60px; /* 左の斜線を配置 */
+  transform: rotate(60deg) translateY(-50%);
+}
+.heroPrice::after {
+  right: -60px; /* 右の斜線を配置 */
+  transform: rotate(-60deg) translateY(-50%);
+}
+.heroPrice__amount {
+  font-size: 4rem; /* 980のサイズを大きく設定 */
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* about */
+.about {
+  width: 100%;
+}/*# sourceMappingURL=top.css.map */

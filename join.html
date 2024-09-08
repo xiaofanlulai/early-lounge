@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入会ページ</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- ファイル読み込み -->
+     <link rel="stylesheet" href="./assets/css/reset.css">
+     <link rel="stylesheet" href="./assets/css/join.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="heading">
+            <h1 class="heading__text">お問い合わせフォーム</h1>
+        </div>
+        <div class="forms">
+            <div class="forms__textWrapper">
+                <p class="forms__text">
+                    ご興味をお持ちいただき、誠にありがとうございます。<br>
+                    ご入力の流れをご確認の上、ご入会お願いします。
+                </p>
+                <p class="forms__text">
+                    ① 本フォームの「Early LOUNGE入会フォーム」を入力＆送信してください。<br>
+                    ② ご入力されたメールアドレスへお支払い用URLをお送りいたします。<br>
+                    ③ お支払いの確認が取れましたら、Early LOUNGE専用チャットスペースへのご招待URLをメールにてお送りいたします。
+                </p>
+            </div>
+            <form action="" class="formBlock">
+                <!-- 入会までの流れ【チェックボックス】 -->
+                 <div class="form__block">
+                    <p>「入会までの流れ」について<span class="form-required">必須</span></p>
+                    <input type="checkbox" name="flow" value="人材募集" required><span>理解しました</span>
+                 </div>
+                <!-- お名前【テキスト入力】 -->
+                <div class="form__block">
+                    <p>お名前<span class="form-required">必須</span></p>
+                    <input type="text" name="name" required>
+                </div>
+                <!-- お名前（ふりがな）【テキスト入力】 -->
+                <div class="form__block">
+                    <p>お名前（ふりがな）<span class="form-required">必須</span></p>
+                    <input type="text" name="name_furigana" required>
+                </div>
+                <!-- メールアドレス【テキスト入力】 -->
+                <div class="form__block">
+                    <p>メールアドレス<span class="form-required">必須</span></p>
+                    <input type="email" name="email" required>
+                </div>
+                <!-- メールアドレス（確認用）【テキスト入力】 -->
+                <div class="form__block">
+                    <p>メールアドレス（確認用）<span class="form-required">必須</span></p>
+                    <input type="email" name="email_confirm" required>
+                </div>
+                <!-- 知ったきっかけ【チェックボックス】 -->
+                <div class="form__block">
+                    <p>弊社を知ったきっかけ</p>
+                    <input type="checkbox" name="source" value="web"> <span>WEB検索</span><br>
+                    <input type="checkbox" name="source" value="friend"> <span>友人、知人</span><br>
+                    <input type="checkbox" name="source" value="other"> <span>その他</span>
+                </div>
+                <!-- 自由記述【段落入力】 -->
+                <div class="form__block">
+                    <p>自由記述</p>
+                    <textarea name="comments" rows="4"></textarea>
+                </div>
+                <!-- プライバシーポリシーに同意する【チェックボックス】 -->
+                <div class="form__block">
+                    <input type="checkbox" name="privacy_policy" value="agree" required> <span>プライバシーポリシーに同意します</span>
+                </div>
+                <button type="submit" class="form-button">この内容で送信する</button>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

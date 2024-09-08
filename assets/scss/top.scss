@@ -2,6 +2,137 @@
 @import 'foundation/mixins';     // _mixins.scssを読み込む
 @import 'foundation/layout';     // _layout.scssを読み込む
 
-/* ==============================
- informationセクション
-============================== */
+/* ========================================
+ top.scss
+========================================== */
+
+/* 汎用クラス or セクション外要素 */
+#js-particles{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* 他のコンテンツの背後に表示 */
+    pointer-events: none;  /* パーティクルの上でのクリックを無効にする */
+}
+
+.backgroundWrapper{
+    background: $background-color;
+    padding: 200px 30px;
+}
+
+.sectionTitle{
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: $font-size-h2-pc;
+    background: $gradient-orange;
+    width: 450px;
+    height: 60px;
+    margin: 0 auto 54px;
+    line-height: $line-height-heading;
+    vertical-align: middle;
+    font-weight: $font-weight-medium;
+
+    &__limelight{
+        font-family: $font-logo;
+        line-height: $line-height-heading;
+    }
+}
+
+/* informationBar */
+.informationBar {
+    background: $background-color;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+
+    &__text {
+        font-size: $font-size-small;
+    }
+}
+
+/* hero */
+.hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+    &__mainImage{
+        width: 550px;
+        height: auto;
+    }
+}
+
+.heroRectangle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 853px;
+    background: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+    &__title{
+        font-size: $font-size-h1-big;
+    }
+}
+
+.heroPoint{
+    display: flex;
+}
+
+.heroPrice {
+    position: relative;
+    font-size: 32px;
+    color: $main-color;
+    text-align: center;
+    font-weight: $font-weight-medium;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 57%;
+        width: 30px; /* 線の長さ */
+        height: 30px; /* 線の長さ */
+        border-top: 4px solid #f39645; /* 線の太さと色 */
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        left: -60px; /* 左の斜線を配置 */
+        transform: rotate(60deg) translateY(-50%);
+    }
+
+    &::after {
+        right: -60px; /* 右の斜線を配置 */
+        transform: rotate(-60deg) translateY(-50%);
+    }
+
+    &__amount{
+        font-size: $font-size-h1-medium;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+}
+
+.heroButton{
+    display: inline-flex;
+    padding: 12px 40px 12px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border-radius: 50px;
+    background: $gradient-pink;
+}
+
+
+/* about */
+.about{
+    width: 100%;
+}

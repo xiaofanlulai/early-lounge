@@ -1,39 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nova+Slim&display=swap');
+// ====================================
+// フォントファミリー
+// ====================================
+$font-primary: "Zen Kaku Gothic New", sans-serif;
+$font-logo: "Limelight", sans-serif;
 
-/* フォントファミリーの変数定義 */
-$font-primary: 'Noto Sans JP', sans-serif;
-$font-logo: 'Nova Slim', sans-serif;
-
-/*  フォントの太さ（Noto Sans JP） */
-$font-weight-thin: 100;
-$font-weight-extra-light: 200;
-$font-weight-light: 300;
-$font-weight-regular: 400; // レギュラー指定
+// ====================================
+// フォントの太さ
+// ====================================
+$font-weight-regular: 400;             // レギュラー指定
 $font-weight-medium: 500;
-$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
-$font-weight-extra-bold: 800;
-$font-weight-black: 900;
 
-/* フォントサイズの定義 */
-$font-size-base: 1.6rem;   /* 基本フォントサイズ (16px相当) */
-$font-size-small: 1.4rem; /* 小さめフォントサイズ (14px相当) */
-$font-size-extremely-small: 1.2rem; /* 極小フォントサイズ (12px相当) */
-$font-size-large: 2rem;  /* 大きめフォントサイズ (20px相当) */
-$font-size-h1: 4rem; /* 見出し (40px相当) */
-$font-size-h2: 3.2rem;   /* 見出し (32px相当) */
-$font-size-h3: 2.4rem; /* 見出し (24px相当) */
+// ====================================
+// フォントサイズ
+// ====================================
+$font-size-base: 1.6rem;               // PC版基本サイズ（16px相当）
+$font-size-small: 1.4rem;              // TABLET,SP版基本サイズ（14px相当）
+$font-size-h1-big: 8rem;               // 80px相当
+$font-size-h1-medium: 6rem;            // 60px相当
+$font-size-h1-small: 4rem;             // 40px相当
+$font-size-h2-medium: 3.2rem;          // 32px相当
+$font-size-h2-tb-small: 2.4rem;        // 24px相当
+$font-size-h3-medium: 2rem;            // 20px相当
+$font-size-h3-tb-small: 1.8rem;        // 18px相当
 
-/* カラーパレットの定義 */
-$background-color: #F7F7F7;
+// ====================================
+// カラーパレット
+// ====================================
+$main-color: #FF9642;
+$gradient-orange: linear-gradient(90deg, #FF9642, #FFBF50);
+$gradient-pink: linear-gradient(90deg, #FFBA56, #FF546E);
+$background-color: #FFF9F4;
 $text-base-color: #333;
-$main-color: #219AC8;
-$secondary-color: #383838;
-$accent-color: #FFF6A1;
-$color-white: #fff;
+$border-color: #ccc;
+// $secondary-color: #;
+// $accent-color: #;
 
-/* その他のスタイル */
-$line-height-base: 1.5; /* 行間を1.5倍に設定 */
-$letter-spacing-base: 0.05rem; /* フォントサイズの5%として文字間スペースを設定 */
-
-
+// ====================================
+// その他のスタイル
+// ====================================
+$line-height-base: 2;                  // デフォルト行間
+$line-height-heading: 1.4;             // 見出し用行間
+$letter-spacing-base: 0.05rem;         // 文字間スペース

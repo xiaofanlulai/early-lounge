@@ -31,23 +31,8 @@ body {
   }
 }
 /* ====================================
- 汎用クラス or セクション外要素
+_component.scss
 ==================================== */
-#js-particles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.backgroundWrapper {
-  background: #FFF9F4;
-  padding: 200px 30px;
-}
-
 .sectionTitle {
   color: #fff;
   text-align: center;
@@ -64,6 +49,41 @@ body {
 .sectionTitle__limelight {
   font-family: "Limelight", sans-serif;
   line-height: 1.4;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+}
+.footer__wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer__logo {
+  font-family: "Limelight", sans-serif;
+}
+
+/* ====================================
+ セクション外要素
+==================================== */
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.backgroundWrapper {
+  background: #FFF9F4;
+  padding: 200px 30px;
 }
 
 /* ====================================
@@ -88,26 +108,26 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  column-gap: 60px;
+  column-gap: 30px;
 }
 .hero__mainImage {
-  width: 550px;
+  width: 40vw;
   height: auto;
 }
 
-.heroRectangle {
+.heroContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 600px;
-  height: 600px;
+  width: 55vw;
+  height: 55vw;
   flex-shrink: 0;
-  border-radius: 853px;
+  border-radius: 50%;
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
-.heroRectangle__title {
+.heroContent__title {
   font-size: 8rem;
   font-family: "Limelight", sans-serif;
 }
@@ -146,7 +166,7 @@ body {
   margin: 0 10px;
 }
 
-.heroButton {
+.button {
   display: inline-flex;
   padding: 12px 40px 12px 100px;
   justify-content: center;
@@ -160,6 +180,22 @@ body {
  about
 ==================================== */
 .about {
-  background: aquamarine;
   padding: 200px;
+}
+
+.aboutContent__image {
+  width: 100px;
+}
+
+/* TABLET */
+@media screen and (width <= 1140px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+/* SP */
+@media screen and (width <= 767px) {
+  body {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=top.css.map */

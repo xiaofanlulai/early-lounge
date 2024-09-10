@@ -1,0 +1,39 @@
+/* ====================================
+_component.scss
+==================================== */
+
+.sectionTitle{
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: $font-size-md;
+    background: $gradient-orange;
+    width: 450px;
+    height: 60px;
+    margin: 0 auto 54px;
+    line-height: $line-height-heading;
+    vertical-align: middle;
+    font-weight: $font-weight-medium;
+
+    &__limelight{
+        font-family: $font-logo;
+        line-height: $line-height-heading;
+    }
+}
+
+.footer{
+    background: $text-base-color;
+    color: #fff;
+    &__wrapper{
+        max-width: 1200px;
+        width: 100%;
+        padding: 40px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &__logo{
+        font-family: $font-logo;
+    }
+}

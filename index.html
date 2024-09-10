@@ -11,22 +11,20 @@
      <link rel="stylesheet" href="./assets/css/top.css">
 </head>
 <body>
-    <!-- 楕円形を動かすアニメーション -->
-    <div id="js-particles"></div>
-
-    <div class="informationBar">
-        <p class="informationBar__text">リニューアル記念！今なら月額500円で入会できます！</p>
-    </div>
-
-    <header class="header">
-    </header>
 
     <main>
+        <!-- 楕円形を動かすアニメーション -->
+        <div id="js-particles" class="particles"></div>
+
+        <div class="informationBar">
+            <p class="informationBar__text">リニューアル記念！今なら月額500円で入会できます！</p>
+        </div>
+
         <section class="hero">
             <img class="hero__mainImage" src="./assets/images/hero-main.png" alt="">
-            <div class="heroRectangle">
-                <p class="heroRectangle__subTitle">朝6時から始める自己実現「朝活コミュニティ」</p>
-                <h1 class="heroRectangle__title">Early LOUNGE</h1>
+            <div class="heroContent">
+                <p class="heroContent__subTitle">朝6時から始める自己実現「朝活コミュニティ」</p>
+                <h1 class="heroContent__title">Early LOUNGE</h1>
                 <ul class="heroPoint">
                     <li class="heroPoint__item">
                         <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon01.png" alt="">業界最安値
@@ -38,15 +36,26 @@
                         <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon01.png" alt="">業界最安値
                     </li>
                 </ul>
-                <p class="heroPrice">
-                    月額<span class="heroPrice__amount">980</span>円
+                <p class="heroContent__price">
+                    月額<span class="heroContent__priceAmount">980</span>円
                 </p>
-                <button class="Button">今すぐ入会する</button>
+                <button class="commonButton">今すぐ入会する</button>
             </div>
         </section>
 
         <section class="about">
-            
+            <h2 class="sectionTitle">Early LOUNGEとは</h2>
+            <div class="aboutContent">
+                <div class="aboutContent__textWrapper">
+                    <p class="aboutContent__text --first">
+                        夢に挑戦する人たちが一緒に団結し朝を攻略することで、今までとは違った新しいキャリアを手に入れましょう。
+                    </p>
+                    <p class="aboutContent__text">
+                        夢に挑戦する人たちが一緒に団結し朝を攻略することで、今までとは違った新しいキャリアを手に入れましょう。
+                    </p>
+                </div>
+                <img src="./assets/images/about-image.png" alt="" class="aboutContent__image">
+            </div>
         </section>
 
         <section class="quote"></section>
@@ -86,6 +95,17 @@
     </main>
 
     <footer class="footer">
+        <div class="footer__wrapper">
+            <h1 class="footer__logo">Early LOUNGE</h1>
+            <ul class="footerList">
+                <li class="footerList__item">
+                    <a href="" class="footerList__itemLink">
+                        お問い合わせ
+                        <span class="footerList__itemIcon"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <!-- jQueryの読み込み -->

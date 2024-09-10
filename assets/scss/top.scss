@@ -1,12 +1,13 @@
-@import 'foundation/variables';  // _variables.scssを読み込む
-@import 'foundation/mixins';     // _mixins.scssを読み込む
-@import 'foundation/layout';     // _layout.scssを読み込む
+@import 'foundation/variables';
+@import 'foundation/mixins';
+@import 'foundation/layout';
+@import 'foundation/component';
 
 /* ====================================
- 汎用クラス or セクション外要素
+ セクション外要素
 ==================================== */
 
-#js-particles{
+.particles{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -19,25 +20,6 @@
 .backgroundWrapper{
     background: $background-color;
     padding: 200px 30px;
-}
-
-.sectionTitle{
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    font-size: $font-size-md;
-    background: $gradient-orange;
-    width: 450px;
-    height: 60px;
-    margin: 0 auto 54px;
-    line-height: $line-height-heading;
-    vertical-align: middle;
-    font-weight: $font-weight-medium;
-
-    &__limelight{
-        font-family: $font-logo;
-        line-height: $line-height-heading;
-    }
 }
 
 /* ====================================
@@ -63,22 +45,22 @@
     width: 100%;
     display: flex;
     align-items: center;
-    column-gap: 60px;
+    column-gap: 30px;
     &__mainImage{
-        width: 550px;
+        width: 40vw;
         height: auto;
     }
 }
 
-.heroRectangle{
+.heroContent{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 600px;
-    height: 600px;
+    width: 55vw;
+    height: 55vw;
     flex-shrink: 0;
-    border-radius: 853px;
+    border-radius: 50%;
     background: #fff;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
     &__title{
@@ -125,7 +107,7 @@
     }
 }
 
-.heroButton{
+.button{
     display: inline-flex;
     padding: 12px 40px 12px 100px;
     justify-content: center;
@@ -140,6 +122,25 @@
  about
 ==================================== */
 .about{
-    background: aquamarine;
     padding: 200px;
+}
+
+// 応急処置しただけ
+.aboutContent__image{
+    width: 100px;
+}
+
+
+/* TABLET */
+@media screen and (width <= 1140px) {
+    body{
+        font-size: $font-size-base-small;
+    }
+}
+
+/* SP */
+@media screen and (width <= 767px) {
+    body{
+        font-size: $font-size-base-small;
+    }
 }

@@ -1,6 +1,7 @@
-@import 'foundation/variables';  // _variables.scssを読み込む
-@import 'foundation/mixins';     // _mixins.scssを読み込む
-@import 'foundation/layout';     // _layout.scssを読み込む
+@import 'foundation/variables';
+@import 'foundation/mixins';
+@import 'foundation/layout';
+@import 'foundation/component';
 
 /* チェックボックスとラベルの表示を修正 */
 input[type="checkbox"] {
@@ -28,7 +29,7 @@ textarea {
     background: $gradient-pink;
     &__text{
         text-align: center;
-        font-size: $font-size-h2-pc;
+        font-size: $font-size-md;
         color: #fff;
     }
 }

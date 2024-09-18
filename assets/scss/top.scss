@@ -3,133 +3,142 @@
 @import 'foundation/layout';
 @import 'foundation/component';
 
+/* =====================================================
+   =====================================================
+   ********************  top.scss  *********************
+   =====================================================
+   ===================================================== */
+
 /* ====================================
  セクション外要素
 ==================================== */
-
 .particles{
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     z-index: -1; // 他のコンテンツの背後に表示
+    width: 100%;
+    height: 100%;
     pointer-events: none;  // パーティクルの上でのクリックを無効にする
 }
 
-.backgroundWrapper{
-    background: $background-color;
-    padding: 200px 30px;
+.backgroundOuter{
+    background-color: $background-color;
+    padding: 108px 0 120px 0;
+    background-image: url(../images/feature-background.png);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position: left top 80px;
 }
 
 /* ====================================
  informationBar
 ==================================== */
-.informationBar {
-    background: $background-color;
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
+// .informationBar {
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     height: 30px;
+//     background: $background-color;
+//     line-height: 30px;
 
-    &__text {
-        font-size: $font-size-base-small;
-    }
-}
+//     &__text {
+//         font-size: $font-size-base-small;
+//     }
+// }
 
 /* ====================================
  hero
 ==================================== */
 .hero{
-    width: 100%;
     display: flex;
     align-items: center;
-    column-gap: 30px;
-    &__mainImage{
-        width: 40vw;
-        height: auto;
-    }
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    // margin-bottom: 120px;
+}
+
+.heroMainImage{
+    width: 40vw;
+    max-height: inherit;
 }
 
 .heroContent{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 55vw;
-    height: 55vw;
-    flex-shrink: 0;
+    align-items: center;
+    width: 58vw;
+    height: 58vw;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 0.10);
+    background-color: #fff;
+    &__subTitle {
+    }
     &__title{
-        font-size: $font-size-xxl;
+        margin-bottom: 25px;
         font-family: $font-logo;
+        font-size: $font-size-xxl;
+    }
+}
+
+/* 1250px以下のPC画面サイズは6remにする */
+@media screen and (max-width: 1250px) {
+    .heroContent__title {
+        font-size: $font-size-xl;
     }
 }
 
 .heroPoint{
     display: flex;
+    column-gap: 32px;
+    align-items: center;
+    margin-bottom: 50px;
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        color: $main-color;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+        line-height: 2;
+        &Icon {
+            width: 40px;
+        }
+    }
 }
 
 .heroPrice {
-    position: relative;
-    font-size: $font-size-md;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 30px;
     color: $main-color;
-    text-align: center;
+    font-size: $font-size-md;
     font-weight: $font-weight-medium;
+    line-height: 1;
 
-    &::before, &::after {
-        content: "";
-        position: absolute;
-        top: 57%;
-        width: 30px; /* 線の長さ */
-        height: 30px; /* 線の長さ */
-        border-top: 4px solid #f39645; /* 線の太さと色 */
-        transform: translateY(-50%);
-    }
-
-    &::before {
-        left: -60px; /* 左の斜線を配置 */
-        transform: rotate(60deg) translateY(-50%);
-    }
-
-    &::after {
-        right: -60px; /* 右の斜線を配置 */
-        transform: rotate(-60deg) translateY(-50%);
+    &__decoration {
+        font-size: $font-size-xl;
+        line-height: 1;
+        &.--left {
+            padding-right: 5px;
+        }
+        &.--right {
+            padding-left: 5px;
+        }
     }
 
     &__amount{
-        font-size: $font-size-lg;
-        font-weight: bold;
         margin: 0 10px;
+        font-size: $font-size-xl;
+        font-weight: bold;
+        line-height: 1;
     }
 }
-
-.button{
-    display: inline-flex;
-    padding: 12px 40px 12px 100px;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    border-radius: 50px;
-    background: $gradient-pink;
-}
-
-
-/* ====================================
- about
-==================================== */
-.about{
-    padding: 200px;
-}
-
-// 応急処置しただけ
-.aboutContent__image{
-    width: 100px;
-}
-
 
 /* TABLET */
 @media screen and (width <= 1140px) {
@@ -143,4 +152,164 @@
     body{
         font-size: $font-size-base-small;
     }
+}
+
+/* ====================================
+ about
+==================================== */
+.about {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    &__image {
+        position: absolute;
+        top: 15%;
+        right: 0;
+        width: 493px;
+        height: auto;
+    }
+}
+
+.aboutContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    background-color: aqua;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+    &__text {
+        width: 360px;
+        line-height: $line-height-large;
+    }
+}
+
+/* ====================================
+ feature
+==================================== */
+.feature {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto 120px;
+}
+
+.featureItem {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    &__wrapper {
+        position: relative;
+        background-color: aqua;
+    }
+    &__image {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: 50%; /* コンテナの中央に配置 */
+        transform: translateY(-50%); /* 自身の高さの50%を上に移動して中央に揃える */
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+}
+
+.featureText {
+    width: 700px;
+    margin-left: auto;
+    padding: 60px 40px 60px 120px;
+    background-color: beige;
+    border-radius: 30px;
+    border-bottom: 8px solid $main-color;
+    background-color: #fff;
+    &__heading {
+        margin-bottom: 16px;
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+    }
+    &__speechBubble {
+        width: 60px;
+        height: 60px;
+        background-image: url(../images/feature-speechbubble.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        &Number {
+            font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            line-height: 1;
+            font-weight: $font-weight-medium;
+            color: #fff;
+        }
+    }
+    &__title {
+        color: $main-color;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+    &__description {
+        line-height: $line-height-large;
+    }
+}
+
+/* ====================================
+ feature
+==================================== */
+
+.voice {
+    margin-bottom: 128px;
+}
+
+.voiceCard {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto 200px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    justify-content: space-between;
+    &__item {
+        background-color: #fff;
+        padding: 28px;
+        border-radius: 30px;
+        border-bottom: 8px solid $main-color;
+        &Image {
+            width: 160px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        &Title {
+            font-size: $font-size-xs;
+            text-align: center;
+            font-weight: $font-weight-medium;
+            color: $main-color;
+            margin: 16px 0;
+        }
+        &Text {
+            line-height: $line-height-large;
+        }
+    }
+}
+
+
+.item {
+    margin-right: 20px; /* スライド間の間隔を10pxに設定 */
+}
+
+// .slick-track {
+//   display: flex;
+//   gap: 30px; /* 間隔を設定 */
+// }
+
+.bottom .slick-slide {
+    transform: translateX(50%); /* 下のスライダーの位置をずらす */
 }

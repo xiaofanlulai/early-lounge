@@ -5,8 +5,6 @@
 
 /* チェックボックスとラベルの表示を修正 */
 input[type="checkbox"] {
-    -webkit-appearance: checkbox; /* Safari用 */
-    appearance: checkbox; /* 他のブラウザ用 */
     margin-right: 10px; /* チェックボックスとテキストの間のスペースを追加 */
     vertical-align: middle; /* チェックボックスとテキストを垂直方向で中央揃え */
 }
@@ -15,12 +13,12 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="email"],
 textarea {
-    box-sizing: border-box;
-    padding: 10px;
     width: 100%;
+    margin-top: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 5px;
+    box-sizing: border-box;
     font-size: 16px;
 }
 
@@ -28,15 +26,15 @@ textarea {
     padding: 120px 0;
     background: $gradient-pink;
     &__text{
-        text-align: center;
-        font-size: $font-size-md;
         color: #fff;
+        font-size: $font-size-md;
+        text-align: center;
     }
 }
 
 .forms{
-    max-width: 1040px;
     width: 100%;
+    max-width: 1040px;
     margin: 80px auto 200px;
 }
 
@@ -63,11 +61,11 @@ textarea {
 /* 必須アイコン */
 .form-required {
     margin-left: 2em;
-    color: #fff;
-    background-color: #f67a7a;
     padding: 2px 8px;
-    font-size: 1.2rem;
     border-radius: 3px;
+    background-color: #f67a7a;
+    color: #fff;
+    font-size: 1.2rem;
   }
 
 .form__block {
@@ -75,18 +73,18 @@ textarea {
 }
 
 .form__block p {
-    font-weight: bold;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-button {
     padding: 12px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .form-button:hover {

@@ -52,3 +52,59 @@ particlesJS('js-particles', {
   },
   "retina_detect": true
 });
+
+// =============================================
+// スクロール検知とsectionTitleアニメーション開始
+// =============================================
+document.addEventListener("DOMContentLoaded", function () {
+  const targets = document.querySelectorAll(".sectionTitle__wrapper");
+
+  const observer = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target); // 一度アニメーションを開始したら、再度監視しない
+        }
+      });
+    },
+    { threshold: 1 } // 70%以上見えたときにアニメーションを開始
+  );
+
+  targets.forEach(target => {
+    observer.observe(target);
+  });
+});
+
+// =============================================
+// 「利用者の声」セクションのsliderアニメーション
+// =============================================
+$(function() {
+  $('#js-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    arrows: false,
+    swipe: false,
+    slidesToShow: 4,
+    cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    variableWidth: true, // これを追加
+  });
+});
+
+$(function() {
+  $('#js-slider-bottom').slick({
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+    arrows: false,
+    swipe: false,
+    slidesToShow: 4,
+    cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    variableWidth: true, // これを追加
+  });
+});

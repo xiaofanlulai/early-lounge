@@ -1,23 +1,24 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap";
 
-/* ====================================
- _layout.scss
-==================================== */
+/* =====================================================
+   =====================================================
+   ******************  _layout.scss  *******************
+   =====================================================
+   ===================================================== */
 
 html{
     font-size: 62.5%;
 }
 
 body{
-    font-family: $font-primary;
-    font-size: $font-size-base;
-    font-weight: $font-weight-regular;
-    background-color: #fff;
+    width: 100%;
     color: $text-base-color;
+    font-size: $font-size-base;
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
     line-height: $line-height-base;
     letter-spacing: $letter-spacing-base;
-    width: 100%;
 }
 
 /* TABLET */

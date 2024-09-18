@@ -7,21 +7,23 @@
     <meta name="description" content="">
     <link rel="shortcut icon" href="./assets/images/favicon.ico" />
     <!-- ファイル読み込み -->
-     <link rel="stylesheet" href="./assets/css/reset.css">
-     <link rel="stylesheet" href="./assets/css/top.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/top.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
 </head>
 <body>
 
-    <main>
-        <!-- 楕円形を動かすアニメーション -->
-        <div id="js-particles" class="particles"></div>
+    <!-- 楕円形を動かすアニメーション -->
+    <div id="js-particles" class="particles"></div>
 
-        <div class="informationBar">
+    <main>
+        <!-- <div class="informationBar">
             <p class="informationBar__text">リニューアル記念！今なら月額500円で入会できます！</p>
-        </div>
+        </div> -->
 
         <section class="hero">
-            <img class="hero__mainImage" src="./assets/images/hero-main.png" alt="">
+            <img class="heroMainImage" src="./assets/images/hero-main.png" alt="">
             <div class="heroContent">
                 <p class="heroContent__subTitle">朝6時から始める自己実現「朝活コミュニティ」</p>
                 <h1 class="heroContent__title">Early LOUNGE</h1>
@@ -30,88 +32,187 @@
                         <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon01.png" alt="">業界最安値
                     </li>
                     <li class="heroPoint__item">
-                        <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon01.png" alt="">業界最安値
+                        <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon02.png" alt="">業界最安値
                     </li>
                     <li class="heroPoint__item">
-                        <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon01.png" alt="">業界最安値
+                        <img class="heroPoint__itemIcon" src="./assets/images/hero-point-icon03.png" alt="">業界最安値
                     </li>
                 </ul>
-                <p class="heroContent__price">
-                    月額<span class="heroContent__priceAmount">980</span>円
+                <p class="heroPrice">
+                    <span class="heroPrice__decoration --left">\</span>
+                    月額<span class="heroPrice__amount">980</span>円
+                    <span class="heroPrice__decoration --right">/</span>
                 </p>
-                <button class="commonButton">今すぐ入会する</button>
+                <a href="" class="commonButton">今すぐ入会する</a>
             </div>
         </section>
 
         <section class="about">
-            <h2 class="sectionTitle">Early LOUNGEとは</h2>
-            <div class="aboutContent">
-                <div class="aboutContent__textWrapper">
-                    <p class="aboutContent__text --first">
-                        夢に挑戦する人たちが一緒に団結し朝を攻略することで、今までとは違った新しいキャリアを手に入れましょう。
-                    </p>
-                    <p class="aboutContent__text">
-                        夢に挑戦する人たちが一緒に団結し朝を攻略することで、今までとは違った新しいキャリアを手に入れましょう。
-                    </p>
-                </div>
-                <img src="./assets/images/about-image.png" alt="" class="aboutContent__image">
+            <div class="sectionTitle --about">
+                <span class="sectionTitle__wrapper">
+                    <span class="sectionTitle__inner">
+                        <span class="sectionTitle__limelight">Early LOUNGE</span>とは？
+                    </span>
+                </span>
             </div>
+            <div class="aboutContent">
+                <p class="aboutContent__text">
+                    夢に挑戦する人たちが一緒に団結し朝を攻略することで今までとは違った新しいキャリアを手に入れましょう。
+                </p>
+                <p class="aboutContent__text">
+                    なりたい自分を実現する「朝活サブスク」は、朝を有効活用して目標を達成したい人をサポートし、仕事もプライベートも充実した日常を手助けする月額制サブスクサービスです。
+                </p>
+            </div>
+            <img src="./assets/images/about-image.png" alt="" class="about__image">
         </section>
 
-        <section class="quote"></section>
+        <!-- <section class="quote"></section> -->
 
-        <div class="backgroundWrapper">
+        <div class="backgroundOuter">
             <section class="feature">
-                <h2 class="sectionTitle">
-                    <span class="sectionTitle__limelight">Early LOUNGE</span>の特徴</h2>
-                <div class="featureContent">
-                    <div class="featureItem">
+                <div class="sectionTitle">
+                    <span class="sectionTitle__wrapper">
+                        <span class="sectionTitle__inner">
+                            <span class="sectionTitle__limelight">Early LOUNGE</span>の特徴
+                        </span>
+                    </span>
+                </div>
+                <div class="featureItem">
+                    <div class="featureItem__wrapper">
                         <img class="featureItem__image" src="./assets/images/feature-image01.png" alt="zoomの画像">
-                        <div class="featureItem__textWrapper">
-                            <div class="featureItem__heading">
-                                <div class="speechBubble">
-                                    <p class="speechBubble__number">1</p>
+                        <div class="featureText">
+                            <div class="featureText__heading">
+                                <div class="featureText__speechBubble">
+                                    <p class="featureText__speechBubbleNumber">1</p>
                                 </div>
-                                <p class="featureItem__title">毎朝開放された自習オンラインスペース</p>
+                                <p class="featureText__title">毎朝開放された自習オンラインスペース</p>
                             </div>
-                            <p class="featureItem__description">
+                            <p class="featureText__description">
+                                Early LOUNGEでは、毎朝5:00から8:00まで「ZOOM」を利用した自習スペースをご用意しています。このスペースでは、各自の目標に向かって集中する時間を確保することができ学習や仕事に最適です。自分のモチベーションに依存せず、仲間と頑張れる仕組みを活用することで、より目標を見える化することが Early LOUNGE 最大の目的です。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="featureItem__wrapper">
+                        <img class="featureItem__image" src="./assets/images/feature-image01.png" alt="zoomの画像">
+                        <div class="featureText">
+                            <div class="featureText__heading">
+                                <div class="featureText__speechBubble">
+                                    <p class="featureText__speechBubbleNumber">1</p>
+                                </div>
+                                <p class="featureText__title">毎朝開放された自習オンラインスペース</p>
+                            </div>
+                            <p class="featureText__description">
+                                Early LOUNGEでは、毎朝5:00から8:00まで「ZOOM」を利用した自習スペースをご用意しています。このスペースでは、各自の目標に向かって集中する時間を確保することができ学習や仕事に最適です。自分のモチベーションに依存せず、仲間と頑張れる仕組みを活用することで、より目標を見える化することが Early LOUNGE 最大の目的です。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="featureItem__wrapper">
+                        <img class="featureItem__image" src="./assets/images/feature-image01.png" alt="zoomの画像">
+                        <div class="featureText">
+                            <div class="featureText__heading">
+                                <div class="featureText__speechBubble">
+                                    <p class="featureText__speechBubbleNumber">1</p>
+                                </div>
+                                <p class="featureText__title">毎朝開放された自習オンラインスペース</p>
+                            </div>
+                            <p class="featureText__description">
                                 Early LOUNGEでは、毎朝5:00から8:00まで「ZOOM」を利用した自習スペースをご用意しています。このスペースでは、各自の目標に向かって集中する時間を確保することができ学習や仕事に最適です。自分のモチベーションに依存せず、仲間と頑張れる仕組みを活用することで、より目標を見える化することが Early LOUNGE 最大の目的です。
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="voice"></section>
+
+            <section class="voice">
+                <div class="sectionTitle">
+                    <span class="sectionTitle__wrapper">
+                        <span class="sectionTitle__inner">
+                            利用者の声
+                        </span>
+                    </span>
+                </div>
+                <div class="voiceCard">
+                    <div class="voiceCard__item">
+                        <img class="voiceCard__itemImage" src="./assets/images/voice-engineer.png" alt="">
+                        <p class="voiceCard__itemTitle">23歳 / ITエンジニア</p>
+                        <p class="voiceCard__itemText">
+                            Early LOUNGEに参加してから、朝の時間の使い方が劇的に変わりました。毎朝のオンライン自習スペースは、静かで集中できる環境を提供してくれるので、日常の仕事や自己学習にとても役立っています。以前は朝の時間を無駄にしてしまうことが多かったのですが、今ではしっかりと有効活用できています。
+                        </p>
+                    </div>
+                    <div class="voiceCard__item">
+                        <img class="voiceCard__itemImage" src="./assets/images/voice-engineer.png" alt="">
+                        <p class="voiceCard__itemTitle">23歳 / ITエンジニア</p>
+                        <p class="voiceCard__itemText">
+                            Early LOUNGEに参加してから、朝の時間の使い方が劇的に変わりました。毎朝のオンライン自習スペースは、静かで集中できる環境を提供してくれるので、日常の仕事や自己学習にとても役立っています。以前は朝の時間を無駄にしてしまうことが多かったのですが、今ではしっかりと有効活用できています。
+                        </p>
+                    </div>
+                    <div class="voiceCard__item">
+                        <img class="voiceCard__itemImage" src="./assets/images/voice-engineer.png" alt="">
+                        <p class="voiceCard__itemTitle">23歳 / ITエンジニア</p>
+                        <p class="voiceCard__itemText">
+                            Early LOUNGEに参加してから、朝の時間の使い方が劇的に変わりました。毎朝のオンライン自習スペースは、静かで集中できる環境を提供してくれるので、日常の仕事や自己学習にとても役立っています。以前は朝の時間を無駄にしてしまうことが多かったのですが、今ではしっかりと有効活用できています。
+                        </p>
+                    </div>
+                </div>
+                <!-- 無限スライダー -->
+                <div id="js-slider" class="slider">
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                </div>
+                <div id="js-slider-bottom" class="slider bottom">
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                    <div class="item"><img src="./assets/images/voice-other.png"></div>
+                </div>
+
+            </section>
 
             <section class="price"></section>
 
             <section class="flow"></section>
         </div>
 
+        <!-- <section class="faq"></section> -->
 
-        <section class="faq"></section>
-
-        <section class="cta"></section>
+        <!-- <section class="cta"></section> -->
     </main>
 
     <footer class="footer">
-        <div class="footer__wrapper">
-            <h1 class="footer__logo">Early LOUNGE</h1>
-            <ul class="footerList">
-                <li class="footerList__item">
-                    <a href="" class="footerList__itemLink">
-                        お問い合わせ
-                        <span class="footerList__itemIcon"></span>
-                    </a>
+        <h1 class="footer__logo">Early LOUNGE</h1>
+        <nav class="footerNavigation">
+            <ul class="footerNavigation__list">
+                <li class="footerNavigation__item">
+                    <a href="">入会手続き</a>
+                </li>
+                <li class="footerNavigation__item">
+                    <a href="">お問い合わせ</a>
+                </li>
+                <li class="footerNavigation__item">
+                    <a href="">プライバシーポリシー</a>
+                </li>
+                <li class="footerNavigation__item">
+                    <a href="">特定商取引法</a>
                 </li>
             </ul>
-        </div>
+        </nav>
+        <p class="footer__copyright">Copyright@aaaaaaaaa</p>
     </footer>
 
     <!-- jQueryの読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <!-- particles.jsの読み込み -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <!-- slickの読み込み -->
+     <script src="./assets/js/slick.min.js"></script>
     <!-- 独自ファイルの読み込み -->
     <script src="./assets/js/top.js"></script>
 </body>

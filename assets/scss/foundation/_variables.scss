@@ -33,12 +33,13 @@ $gradient-pink: linear-gradient(90deg, #FFBA56, #FF546E);
 $background-color: #FFF9F4;
 $text-base-color: #333;
 $border-color: #ccc;
+
 // $secondary-color: #;
 // $accent-color: #;
 
 // ====================================
 // その他のスタイル
 // ====================================
-$line-height-base: 2;                  // デフォルト行間
-$line-height-heading: 1.4;             // 見出し用行間
+$line-height-base: 1.5;                // デフォルト行間
+$line-height-large: 2;                 // 見出し用行間
 $letter-spacing-base: 0.05rem;         // 文字間スペース

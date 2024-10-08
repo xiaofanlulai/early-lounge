@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css2?family=Limelight&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap";
+
+/* =====================================================
+   =====================================================
+   ******************  _layout.scss  *******************
+   =====================================================
+   ===================================================== */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    color: $text-base-color;
+    font-size: $font-size-base;
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-base;
+}
+
+/* TABLET */
+@media screen and (width <= 1140px) {
+    body{
+        font-size: $font-size-base-small;
+    }
+}
+
+/* SP */
+@media screen and (width <= 767px) {
+    body{
+        font-size: $font-size-base-small;
+    }
+}

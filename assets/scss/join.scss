@@ -1,0 +1,92 @@
+@import 'foundation/variables';
+@import 'foundation/mixins';
+@import 'foundation/layout';
+@import 'foundation/component';
+
+/* チェックボックスとラベルの表示を修正 */
+input[type="checkbox"] {
+    margin-right: 10px; /* チェックボックスとテキストの間のスペースを追加 */
+    vertical-align: middle; /* チェックボックスとテキストを垂直方向で中央揃え */
+}
+
+/* 必要に応じて他のフォーム要素のスタイルをカスタマイズ */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.heading{
+    padding: 120px 0;
+    background: $gradient-pink;
+    &__text{
+        color: #fff;
+        font-size: $font-size-md;
+        text-align: center;
+    }
+}
+
+.forms{
+    width: 100%;
+    max-width: 1040px;
+    margin: 80px auto 200px;
+}
+
+.formBlock{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 必須アイコン */
+.form-required {
+    margin-left: 2em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background-color: #f67a7a;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+.form__block {
+    margin-bottom: 20px;
+}
+
+.form__block p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}

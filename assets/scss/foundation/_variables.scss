@@ -1,0 +1,42 @@
+// ====================================
+// フォントファミリー
+// ====================================
+$font-primary: "Zen Kaku Gothic New", sans-serif;
+$font-logo: "Limelight", sans-serif;
+
+// ====================================
+// フォントの太さ
+// ====================================
+$font-weight-regular: 400;             // レギュラー指定
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// ====================================
+// フォントサイズ
+// ====================================
+$font-size-base: 1.6rem;               // PC版基本サイズ（16px相当）
+$font-size-base-small: 1.4rem;         // TABLET,SP版基本サイズ（14px相当）
+$font-size-xxl: 8rem;                  // 80px相当（PC：h1要素相当）
+$font-size-xl: 6rem;                   // 60px相当（TABLET：h1要素相当）
+$font-size-lg: 4rem;                   // 40px相当（SP：h1要素相当）
+$font-size-md: 3.2rem;                 // 32px相当（PC：h2要素相当）
+$font-size-sm: 2.4rem;                 // 24px相当（TABLET,SP：h2要素相当）
+$font-size-xs: 2rem;                   // 20px相当（PC：h1要素相当）
+$font-size-xxs: 1.8rem;                // 18px相当（TABLET,SP：h3要素相当）
+
+// ====================================
+// カラーパレット
+// ====================================
+$main-color: #FF9642;
+$gradient-orange: linear-gradient(90deg, #FF9642, #FFBF50);
+$gradient-pink: linear-gradient(90deg, #FFBA56, #FF546E);
+$background-color: #FFF9F4;
+$text-base-color: #333;
+$border-color: #ccc;
+
+// ====================================
+// その他のスタイル
+// ====================================
+$line-height-base: 1.5;                // デフォルト行間
+$line-height-large: 2;                 // 見出し用行間
+$letter-spacing-base: 0.05rem;         // 文字間スペース

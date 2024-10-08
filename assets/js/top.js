@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 1 } // 70%以上見えたときにアニメーションを開始
+    { threshold: 0.7 } // 70%以上見えたときにアニメーションを開始
   );
 
   targets.forEach(target => {

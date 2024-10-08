@@ -28,7 +28,7 @@
             content: "";
         }
         &.animate::before {
-            animation: bg 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation: bg 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
             animation-delay: 0.7s;
         }
     }
@@ -87,7 +87,7 @@
         border-top: 1px solid #fff;
         border-right: 1px solid #fff;
         transform: translateY(-50%) rotate(45deg);
-        transition: border-color 0,3s ease;
+        transition: border-color 0.3s ease;
         content: "";
     }
     &:hover {
@@ -99,7 +99,7 @@
     }
 }
 
-/* フッダー */
+/* フッター */
 .footer{
     background: $text-base-color;
     color: #fff;

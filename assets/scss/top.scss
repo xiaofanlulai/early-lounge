@@ -48,6 +48,40 @@
 // }
 
 /* ====================================
+ fixedBar
+==================================== */
+.fixedBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+
+    @media screen and (max-width: 1140px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1141px) {
+      display: none;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 0;
+      &:hover {
+        background-color: #555; /* ホバー時の背景色変更 */
+      }
+    }
+  }
+
+/* ====================================
  hero
 ==================================== */
 .hero{
@@ -58,7 +92,7 @@
     max-width: 1440px;
     height: 100vh;
     margin: 0 auto;
-    // margin-bottom: 120px;
+    margin-bottom: 120px;
 }
 
 .heroMainImage{
@@ -74,10 +108,8 @@
     width: 58vw;
     height: 58vw;
     border-radius: 50%;
-    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 0.10);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 0.1);
     background-color: #fff;
-    &__subTitle {
-    }
     &__title{
         margin-bottom: 25px;
         font-family: $font-logo;
@@ -107,6 +139,7 @@
         line-height: 2;
         &Icon {
             width: 40px;
+            height: auto;
         }
     }
 }
@@ -125,33 +158,76 @@
         font-size: $font-size-xl;
         line-height: 1;
         &.--left {
-            padding-right: 5px;
+            padding-right: 20px;
         }
         &.--right {
-            padding-left: 5px;
+            padding-left: 20px;
         }
     }
 
     &__amount{
         margin: 0 10px;
         font-size: $font-size-xl;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         line-height: 1;
     }
 }
 
 /* TABLET */
 @media screen and (width <= 1140px) {
-    body{
-        font-size: $font-size-base-small;
+
+    .hero{
+        flex-direction: column;
+        align-items: start;
+        max-width: none;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .heroMainImage{
+        width: 68vw;
+        max-height: inherit;
+        position: relative;
+        z-index: 2;
+    }
+
+    .heroContent{
+        margin-top: -150px;
+        width: 100vw;
+        height: 100vw;
+        &__title{
+            margin-bottom: 25px;
+            font-family: $font-logo;
+            font-size: $font-size-xl;
+        }
+    }
+
+    .heroPoint{
+        column-gap: 24px;
+        &__item {
+            font-size: $font-size-xxs;
+            &Icon {
+                width: 48px;
+                height: auto;
+            }
+        }
+    }
+
+    .heroPrice {
+        margin-bottom: 10px;
+        font-size: $font-size-sm;
+        &__decoration {
+            font-size: $font-size-lg;
+        }
+        &__amount{
+            margin: 0 8px;
+            font-size: $font-size-lg;
+        }
     }
 }
 
 /* SP */
 @media screen and (width <= 767px) {
-    body{
-        font-size: $font-size-base-small;
-    }
 }
 
 /* ====================================
@@ -187,6 +263,14 @@
         width: 360px;
         line-height: $line-height-large;
     }
+}
+
+/* TABLET */
+@media screen and (width <= 1140px) {
+}
+
+/* SP */
+@media screen and (width <= 767px) {
 }
 
 /* ====================================
